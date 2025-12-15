@@ -16,9 +16,7 @@ Projenin nasıl çalıştığını, canlı analiz ekranını ve genel içgörül
 Projenin nasıl çalıştığını aşağıdaki videodan izleyebilirsiniz:
 
 https://github.com/user-attachments/assets/1ec9dcf5-31d8-4d0c-9af6-c2cf18a22866
-*(Not: Eğer video yukarıda otomatik oynamazsa, dosyalar arasındaki 'demo.mp4' dosyasına tıklayarak izleyebilirsiniz.)*
-
-> **Alternatif İzleme:** [🎥 Tanıtım Videosunu İndir/İzle](demo.mp4)
+*(Not: Eğer video yukarıda otomatik oynamazsa, dosyalar arasındaki 'Video Project.mp4' dosyasına tıklayarak izleyebilirsiniz.)*
 
 ##  Projenin Temel Amaçları ve Başarıları
 
