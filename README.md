@@ -11,8 +11,11 @@ Binlerce yorumu manuel okuma zorluğunu ortadan kaldırarak, markaların müşte
 ## 🎥 Proje Demosu
 
 Projenin nasıl çalıştığını, canlı analiz ekranını ve genel içgörüler panelini aşağıdaki videodan izleyebilirsiniz.
+## 🎥 Proje Demosu
 
-https://github.com/user-attachments/assets/demo.mp4
+Projenin nasıl çalıştığını aşağıdaki videodan izleyebilirsiniz:
+
+https://github.com/user-attachments/assets/1ec9dcf5-31d8-4d0c-9af6-c2cf18a22866
 *(Not: Eğer video yukarıda otomatik oynamazsa, dosyalar arasındaki 'demo.mp4' dosyasına tıklayarak izleyebilirsiniz.)*
 
 > **Alternatif İzleme:** [🎥 Tanıtım Videosunu İndir/İzle](demo.mp4)
