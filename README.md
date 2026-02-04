@@ -1,78 +1,138 @@
-#  Türkçe E-Ticaret Yorumlarında BERT Tabanlı Duygu Analizi: Müşteri İçgörü Paneli
+#### 🇹🇷 Turkish E-Commerce Sentiment Analysis with BERT
+### An End-to-End Customer Insights Dashboard
+## Project Overview
 
-##  Proje Özeti
-Bu proje, Türkiye'nin önde gelen e-ticaret platformlarından (Hepsiburada) elde edilen Türkçe kullanıcı yorumlarını **Doğal Dil İşleme (NLP)** ve **Derin Öğrenme** teknikleriyle analiz ederek, 
-işletmelere interaktif ve aksiyon alınabilir **müşteri içgörüleri** sunan uçtan uca bir yapay zeka çözümüdür. `BERTurk` modeli sayesinde yorumların duygu durumunu yüksek doğrulukla tespit etmekle kalmayıp, 
-`Streamlit` tabanlı interaktif bir Dashboard ile bu analizleri görsel ve anlaşılır bir formata dönüştürmektedir.
+This project presents an end-to-end AI-powered sentiment analysis system that analyzes Turkish customer reviews collected from one of Türkiye’s leading e-commerce platforms (Hepsiburada).
+By leveraging Natural Language Processing (NLP) and Transformer-based deep learning models, the system extracts actionable customer insights and presents them through an interactive Streamlit dashboard.
 
-**Problem Çözücü Yaklaşımım:**
-Binlerce yorumu manuel okuma zorluğunu ortadan kaldırarak, markaların müşteri memnuniyetini anlık izlemesini ve ürün/hizmet iyileştirmelerini hızlıca yapmasını sağlamak.
+Using the BERTurk model, the project accurately classifies customer sentiment while overcoming the linguistic complexity of the Turkish language. The results are visualized in a business-friendly format, enabling companies to monitor customer satisfaction and identify improvement areas efficiently.
 
-## 🎥 Proje Demosu
+## Problem Solved:
+Manually analyzing thousands of customer reviews is inefficient and error-prone. This system automates sentiment analysis, allowing businesses to track customer satisfaction in real time and make data-driven decisions faster.
 
-Projenin nasıl çalıştığını, canlı analiz ekranını ve genel içgörüler panelini aşağıdaki videodan izleyebilirsiniz.
-## 🎥 Proje Demosu
+## Project Demo
 
-Projenin nasıl çalıştığını aşağıdaki videodan izleyebilirsiniz:
+Watch the full demo showcasing:
 
+Live sentiment prediction
+
+Interactive analytics dashboard
+
+Key customer insights
 https://github.com/user-attachments/assets/1ec9dcf5-31d8-4d0c-9af6-c2cf18a22866
-*(Not: Eğer video yukarıda otomatik oynamazsa, dosyalar arasındaki 'Video Project.mp4' dosyasına tıklayarak izleyebilirsiniz.)*
+*If the video does not play automatically, please open the file “Video Project.mp4” from the repository assets.*
 
-##  Projenin Temel Amaçları ve Başarıları
+## Project Objectives & Key Achievements
+# Data Engineering
 
-*   **Veri Mühendisliği:** Ham ve gürültülü (etiket hataları içeren) e-ticaret verisini temizleyip, 15.000 satırlık dengeli ve yüksek kaliteli bir veri setine dönüştürmek.
-*   **Modern NLP Model Geliştirme:** Türkçe'nin yapısal karmaşıklığına uygun, Transformer mimarisine sahip **BERTurk** modeliyle %97.90 gibi yüksek bir doğrulukla duygu analizi yapmak.
-*   **Karşılaştırmalı Analiz:** Geleneksel yöntemlere (TF-IDF + Lojistik Regresyon) kıyasla BERTurk'ün başarıdaki **5 katlık** hata azalmasını bilimsel metriklerle ispatlamak.
-*   **Ürünleştirme (Deployment):** Geliştirilen yapay zeka modelini, son kullanıcının kolayca etkileşime geçebileceği interaktif bir **Streamlit Dashboard**'a dönüştürmek.
+Cleaned and processed 300,000+ raw customer reviews
 
-*   ##  Kullanılan Teknolojiler
+Fixed noisy labels, duplicates, and missing values
 
-*   **Python:** Projenin ana geliştirme dili.
-*   **HuggingFace Transformers:** BERTurk modelinin indirilmesi, ince ayarı (Fine-Tuning) ve yönetimi.
-*   **Streamlit:** Veri analizlerini görselleştiren ve modelle etkileşimi sağlayan interaktif web arayüzü (Dashboard) geliştirme.
-*   **Pandas:** Veri manipülasyonu ve ön işleme.
-*   **Scikit-learn:** Baseline model (TF-IDF + Lojistik Regresyon) oluşturma ve metrik hesaplama.
-*   **Altair & Matplotlib/Seaborn:** Veri görselleştirme ve grafik oluşturma.
-*   **Google Colab:** GPU destekli model eğitimi için kullanılmıştır.
+Created a balanced, high-quality dataset of 15,000 samples using oversampling techniques
 
-*   ##  Proje Adımları ve Elde Edilen Bulgular
+# Advanced NLP Modeling
 
-1.  **Veri Temizliği ve Hazırlığı:**
-    *   300.000+ satırlık ham Hepsiburada verisi temizlendi.
-    *   Eksik/tekrarlayan veriler ve etiket hataları giderildi.
-    *   1'den 5'e kadar puan dağılımını dengelemek için **Oversampling** tekniği kullanılarak 15.000 satırlık nihai veri seti oluşturuldu.
-    *   Metinler küçük harfe çevrildi, noktalama ve sayılar temizlendi (BERTurk'e uygun).
+Fine-tuned the BERTurk Transformer model, optimized for Turkish language structure
 
-2.  **Modelleme ve Eğitim:**
-    *   **Baseline Model:** TF-IDF ve Lojistik Regresyon ile %92.49 doğruluk elde edildi.
-    *   **Ana Model:** BERTurk modeli 3 epoch boyunca eğitilerek **%97.90** doğruluk oranına ulaştı.
-    *   **Sonuç:** BERTurk, geleneksel modele göre hata oranını **5 kattan fazla** azaltarak üstünlüğünü kanıtladı. Özellikle "Ürün güzel ama kargo kötü" gibi bağlamsal ifadeleri başarıyla yorumladı.
+Achieved 97.90% classification accuracy
 
-3.  **İnteraktif Dashboard Geliştirme:**
-    *   Modelin anlık tahmin yapabildiği "Canlı Analiz" sekmesi.
-    *   Geçmiş veri istatistiklerini (Memnuniyet, Şikayet oranları, Duygu Dağılımı) görselleştiren "Genel İçgörüler" sekmesi.
-    *   Nötr ve Negatif yorumları filtreleyerek gelişim alanlarını gösteren tablo.
+# Comparative Evaluation
 
-## 🚀 Kurulum ve Çalıştırma Rehberi
+Built a traditional baseline model (TF-IDF + Logistic Regression)
 
-Bu proje dosyaları, çalışmak için gerekli olan temel kodları ve veri setini içerir.
+Demonstrated that BERTurk reduces the error rate by more than 5×
 
-### ⚠️ Önemli Bilgilendirme (Model Dosyası Hakkında)
-Eğitilen **BERTurk model dosyaları (~450 MB)** GitHub dosya boyutu sınırını aştığı için bu depoya (repository) doğrudan eklenememiştir.
-*   Projenin çalışma mantığını ve çıktılarını yukarıdaki **Demo Videosu** üzerinden inceleyebilirsiniz.
-*   Projeyi yerel bilgisayarınızda çalıştırmak isterseniz, `my_sentiment_model` klasörünü ayrıca temin etmeniz veya eğitmeniz gerekmektedir.
+Validated improvements using scientific evaluation metrics
 
-### Yerel Kurulum Adımları (Standart Prosedür)
+# Deployment & Productization
 
-**1. Repoyu Klonlayın:**
-```bash
-git clone https://github.com/KULLANICI_ADINIZ/Turkish-Ecommerce-Sentiment-Analysis.git
+Deployed the trained model into an interactive Streamlit dashboard
+
+Enabled non-technical users to explore insights and perform live predictions
+
+# Technologies Used
+
+Python – Core development language
+
+HuggingFace Transformers – BERTurk model loading and fine-tuning
+
+Streamlit – Interactive dashboard & web interface
+
+Pandas – Data preprocessing and manipulation
+
+Scikit-learn – Baseline model & evaluation metrics
+
+Altair & Matplotlib / Seaborn – Data visualization
+
+Google Colab – GPU-accelerated model training
+
+## Project Workflow & Findings
+1️⃣ Data Cleaning & Preparation
+
+Cleaned 300K+ raw Hepsiburada reviews
+
+Removed duplicates, missing entries, and labeling inconsistencies
+
+Balanced rating distribution (1–5 stars) using oversampling
+
+Normalized text for Transformer-based modeling
+
+2️⃣ Modeling & Training
+
+Baseline Model:
+
+TF-IDF + Logistic Regression
+
+Accuracy: 92.49%
+
+Main Model:
+
+BERTurk fine-tuned for 3 epochs
+
+Accuracy: 97.90%
+
+## Key Insight:
+BERTurk successfully captured contextual sentiment in complex expressions such as:
+
+“The product is good, but the delivery was terrible.”
+
+3️⃣ Interactive Dashboard
+
+The Streamlit dashboard includes:
+
+Live Analysis: Real-time sentiment prediction for new reviews
+
+General Insights:
+
+Satisfaction levels
+
+Complaint ratios
+
+Sentiment distribution
+
+Actionable Tables:
+
+Filtered negative & neutral reviews to highlight improvement areas
+
+# Installation & Usage Guide
+# Important Note (Model Files)
+
+Due to GitHub’s file size limitations, the fine-tuned BERTurk model files (~450 MB) are not included in this repository.
+
+You can:
+
+Review the full functionality via the demo video
+
+Train the model yourself or provide the my_sentiment_model directory manually to run locally
+
+🔧 Local Setup
+1. Clone the Repository
+git clone https://github.com/YOUR_USERNAME/Turkish-Ecommerce-Sentiment-Analysis.git
 cd Turkish-Ecommerce-Sentiment-Analysis
-2. Gerekli Kütüphaneleri Kurun:
-code
-Bash
+
+2. Install Dependencies
 pip install -r requirements.txt
-3. Uygulamayı Başlatın:
-code
-Bash
+
+3. Run the Application
 streamlit run app.py
