@@ -1,5 +1,7 @@
-#### 🇹🇷 Turkish E-Commerce Sentiment Analysis with BERT
-### An End-to-End Customer Insights Dashboard
+#### # 🇹🇷 Turkish E-Commerce Sentiment Analysis with BERT  
+## **An End-to-End NLP & Deep Learning Customer Insights System**
+
+
 ## Project Overview
 
 This project presents an end-to-end AI-powered sentiment analysis system that analyzes Turkish customer reviews collected from one of Türkiye’s leading e-commerce platforms (Hepsiburada).
