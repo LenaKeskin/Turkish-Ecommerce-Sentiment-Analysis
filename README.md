@@ -1,4 +1,4 @@
-#### # 🇹🇷 Turkish E-Commerce Sentiment Analysis with BERT  
+#### TR TURKISH E-COMMERCE SENTİMENT ANALYSİS with BERT  
 ## **An End-to-End NLP & Deep Learning Customer Insights System**
 
 
